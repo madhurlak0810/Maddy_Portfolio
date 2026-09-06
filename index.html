@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madhur Lakshmanan — Portfolio</title>
+  <meta name="description" content="Madhur Lakshmanan — Machine Learning Engineer. AI/ML, GenAI, and cloud infrastructure." />
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;0,900;1,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">ML<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="assets/Madhur_Lakshmanan_Resume.pdf" download>Resume ↓</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="dot-nav" id="dotNav" aria-hidden="true">
+    <button class="dot" data-target="top" aria-label="Go to intro"></button>
+    <button class="dot" data-target="about" aria-label="Go to about"></button>
+    <button class="dot" data-target="experience" aria-label="Go to experience"></button>
+    <button class="dot" data-target="projects" aria-label="Go to projects"></button>
+    <button class="dot" data-target="skills" aria-label="Go to skills"></button>
+    <button class="dot" data-target="education" aria-label="Go to education"></button>
+    <button class="dot" data-target="contact" aria-label="Go to contact"></button>
+  </div>
+
+  <button class="edge-nav edge-prev" id="prevPanel" aria-label="Previous section">‹</button>
+  <button class="edge-nav edge-next" id="nextPanel" aria-label="Next section">›</button>
+
+  <main class="scroller" id="scroller">
+    <!-- HERO -->
+    <section class="panel hero" id="top">
+      <div class="hero-inner">
+        <p class="hero-eyebrow reveal">College Park, MD</p>
+        <h1 class="hero-title reveal">
+          Madhur Lakshmanan
+        </h1>
+        <p class="hero-role reveal">Machine Learning Engineer</p>
+        <p class="hero-sub reveal">
+          Building LLM-orchestrated platforms, retrieval systems, and cloud-native ML
+          infrastructure — from serverless RAG pipelines on AWS to production forecasting
+          systems handling millions of records.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary scroll-link" data-target="projects">View Projects</a>
+          <a href="assets/Madhur_Lakshmanan_Resume.pdf" download class="btn btn-ghost">Download Resume ↓</a>
+        </div>
+        <div class="hero-links reveal">
+          <a href="https://github.com/madhurlak0810" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://linkedin.com/in/madhurlak" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="mailto:madhurlak0810@gmail.com">Email ↗</a>
+        </div>
+        <p class="hero-scroll-hint reveal">Scroll or use → to explore</p>
+      </div>
+      <div class="hero-grid" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="panel section" id="about">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <span class="tag">01 — About</span>
+          <h2>Turning research into shipped systems</h2>
+        </div>
+        <div class="about-grid">
+          <p class="about-text reveal">
+            I'm a Master's student in Applied Machine Learning at the University of Maryland,
+            currently building AI infrastructure that spans LLM orchestration, retrieval-augmented
+            generation, and cloud-native deployment. My work has ranged from AutoEDA agent platforms
+            at <strong>Causify AI</strong>, to production forecasting pipelines at
+            <strong>Thomson Reuters</strong>, to fully serverless research-intelligence systems on AWS.
+            I care about interfaces that make complex ML systems usable — structured outputs, schema-
+            constrained generation, and auditable pipelines that people can actually trust.
+          </p>
+          <div class="about-stats reveal">
+            <div class="stat">
+              <span class="stat-num">70%</span>
+              <span class="stat-label">processing time reduction re-engineering a legacy data pipeline</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">18%</span>
+              <span class="stat-label">forecast accuracy improvement over production baseline</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">500+</span>
+              <span class="stat-label">public companies covered in an SEC filing intelligence pipeline</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="panel section" id="experience">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <span class="tag">02 — Experience</span>
+          <h2>Where I've worked</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <h3>Machine Learning Engineer Intern</h3>
+                <span class="timeline-date">Jul 2025 – Sep 2025</span>
+              </div>
+              <p class="timeline-org">Causify AI</p>
+              <ul>
+                <li>Built core components for an LLM-orchestrated AutoEDA platform using Ollama models and FastAPI, implementing JSON/YAML schema profiling, structured outputs, and agent-tool interfaces for natural-language dataset analysis.</li>
+                <li>Designed modular statistical-analysis tools in scikit-learn for trend, changepoint, outlier, and association detection, expanding the platform's analytical capabilities.</li>
+                <li>Built an internal documentation assistant with Dify, automating Markdown ingestion and knowledge-base sync via GitHub Actions.</li>
+                <li>Extended the automated testing framework with pytest multiprocessing hooks and Docker support for parallel, containerized execution.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <h3>AI Technology Intern</h3>
+                <span class="timeline-date">Mar 2024 – Aug 2024</span>
+              </div>
+              <p class="timeline-org">Thomson Reuters</p>
+              <ul>
+                <li>Re-engineered a legacy OmniMark data-processing workflow into production Python and Bash pipelines with parallelization, integrating REST APIs and Microsoft SQL Server — reducing processing time by nearly 70%.</li>
+                <li>Developed and evaluated time-series forecasting pipelines in AWS SageMaker, improving forecast accuracy by 18% over the production baseline.</li>
+                <li>Designed REST API contracts using OpenAPI and authored technical documentation in Confluence, enabling engineering and legal-product teams to adopt new services faster.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-top">
+                <h3>Data Intern</h3>
+                <span class="timeline-date">Jun 2022 – Jul 2022</span>
+              </div>
+              <p class="timeline-org">Mareana (Startup)</p>
+              <ul>
+                <li>Authored REST API documentation for 100+ data endpoints, reducing developer onboarding time by 40% and supporting downstream analytics and ML pipeline integration.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="panel section" id="projects">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <span class="tag">03 — Projects</span>
+          <h2>Selected work</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-card-head">
+              <h3>Serverless Research Intelligence Platform</h3>
+              <a href="https://github.com/madhurlak0810/Custom-Research" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
+            </div>
+            <p>
+              A fully serverless research-intelligence platform on AWS that ingests arXiv papers and
+              indexes Amazon Titan embeddings in Aurora PostgreSQL/pgvector for semantic retrieval.
+            </p>
+            <ul>
+              <li>Event-driven services (Lambda + API Gateway) separating ingestion, document processing, retrieval, and conversational inference into independently deployable components.</li>
+              <li>Citation-grounded generation returning retrieved passages, paper metadata, and similarity scores for source-traceable answers.</li>
+              <li>Complete infrastructure via AWS CDK — IAM policies, Secrets Manager, deduplication, structured logging, and automated deployment.</li>
+            </ul>
+            <div class="tag-row">
+              <span>Python</span><span>AWS CDK</span><span>Lambda</span><span>API Gateway</span><span>Aurora PostgreSQL</span><span>pgvector</span><span>Bedrock</span><span>ArXiv API</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-head">
+              <h3>Financial and Regulatory Document Intelligence Platform</h3>
+              <a href="https://github.com/madhurlak0810/SEC-edgar" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
+            </div>
+            <p>
+              An SEC document-intelligence pipeline covering 15+ years of 10-K/10-Q filings across
+              500+ public companies — handling ingestion, preprocessing, extraction, and retrieval.
+            </p>
+            <ul>
+              <li>Schema-constrained GPT-4 extraction pipelines using few-shot prompting and validated JSON schemas to identify risk factors, litigation disclosures, financial metrics, and material events.</li>
+              <li>Multi-stage LLM workflows for extraction, validation, retrieval, summarization, and report generation, producing auditable structured outputs.</li>
+            </ul>
+            <div class="tag-row">
+              <span>Python</span><span>OpenAI GPT</span><span>LangChain</span><span>SEC EDGAR API</span><span>Tableau</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-head">
+              <h3>PersonalOS</h3>
+              <a href="https://github.com/madhurlak0810/PersonalOS" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
+            </div>
+            <p>
+              A local-first, multi-agent personal assistant orchestrated with LangGraph — coordinating
+              job search, calendar, communications, and file agents under a single control plane.
+            </p>
+            <ul>
+              <li>Durable state and full audit trails across agent runs, so every action taken can be traced back to its trigger.</li>
+              <li>A deterministic policy engine sits between proposal and execution — the LLM proposes actions, human-approval gates and the policy engine authorize and execute them.</li>
+            </ul>
+            <div class="tag-row">
+              <span>Python</span><span>LangGraph</span><span>Multi-Agent Systems</span><span>Policy Engine</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-head">
+              <h3>Autonomous Drone Exploration</h3>
+              <a href="https://github.com/madhurlak0810/drone_exploration" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
+            </div>
+            <p>
+              A containerized autonomous exploration system that combines Q-learning reinforcement
+              learning with SLAM mapping to let a drone discover and map unknown environments.
+            </p>
+            <ul>
+              <li>Packaged for reproducible evaluation with Docker and X11 forwarding, so the full simulation stack runs identically across machines.</li>
+            </ul>
+            <div class="tag-row">
+              <span>Python</span><span>Reinforcement Learning</span><span>SLAM</span><span>Docker</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-head">
+              <h3>Recommendation Systems Toolkit</h3>
+              <a href="https://github.com/madhurlak0810/recommendation-systems" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
+            </div>
+            <p>
+              A multi-component library for building, deploying, and managing recommender models —
+              spanning collaborative filtering, hybrid approaches, and popularity-based baselines.
+            </p>
+            <ul>
+              <li>Modular subdirectories for input processing, model training, and model updates, so individual recommendation strategies can be swapped independently.</li>
+            </ul>
+            <div class="tag-row">
+              <span>Python</span><span>Collaborative Filtering</span><span>Hybrid Models</span><span>Recommender Systems</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-head">
+              <h3>NYC EMS Dispatch Optimization</h3>
+              <a href="https://github.com/madhurlak0810/NYC-ems-dispatch" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
+            </div>
+            <p>
+              A simulation of real-time ambulance dispatching across a dense urban area, built on
+              OpenStreetMap data and a location-allocation optimization model.
+            </p>
+            <ul>
+              <li>Models ambulance placement and dispatch decisions to minimize response times under realistic road-network constraints.</li>
+            </ul>
+            <div class="tag-row">
+              <span>Python</span><span>OpenStreetMap</span><span>Location-Allocation Optimization</span><span>Simulation</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-cta reveal">
+          <a href="https://github.com/madhurlak0810" target="_blank" rel="noopener" class="btn btn-ghost">See more on GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="panel section" id="skills">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <span class="tag">04 — Skills</span>
+          <h2>Toolbox</h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>Languages</h3>
+            <div class="tag-row">
+              <span>Python</span><span>SQL</span><span>Java</span><span>C/C++</span><span>Bash</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>ML / GenAI</h3>
+            <div class="tag-row">
+              <span>PyTorch</span><span>scikit-learn</span><span>Hugging Face</span><span>LangGraph</span><span>LangChain</span><span>RAG</span><span>pgvector</span><span>vLLM</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Cloud / Infrastructure</h3>
+            <div class="tag-row">
+              <span>AWS SageMaker</span><span>Lambda</span><span>Bedrock</span><span>CDK</span><span>API Gateway</span><span>S3</span><span>Docker</span><span>Kubernetes</span><span>GitHub Actions</span><span>Airflow</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Backend / Data</h3>
+            <div class="tag-row">
+              <span>FastAPI</span><span>PostgreSQL</span><span>PySpark</span><span>OpenSearch</span><span>REST APIs</span><span>Microsoft SQL Server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="panel section" id="education">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <span class="tag">05 — Education</span>
+          <h2>Academic background</h2>
+        </div>
+
+        <div class="edu-grid">
+          <article class="edu-card reveal">
+            <div class="timeline-top">
+              <h3>University of Maryland</h3>
+              <span class="timeline-date">May 2026</span>
+            </div>
+            <p class="timeline-org">Master of Science, Applied Machine Learning</p>
+            <p class="edu-gpa">GPA: 3.8 / 4.0</p>
+          </article>
+          <article class="edu-card reveal">
+            <div class="timeline-top">
+              <h3>Vellore Institute of Technology</h3>
+              <span class="timeline-date">May 2024</span>
+            </div>
+            <p class="timeline-org">Bachelor of Technology, Electronics and Communication Engineering</p>
+            <p class="edu-gpa">GPA: 3.2 / 4.0</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel section contact-section" id="contact">
+      <div class="section-inner">
+        <div class="contact-box reveal">
+          <span class="tag">06 — Contact</span>
+          <h2>Let's build something together</h2>
+          <p>
+            Open to machine learning engineering and AI infrastructure roles.
+            Reach out — I usually reply within a day.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:madhurlak0810@gmail.com" class="btn btn-primary">madhurlak0810@gmail.com</a>
+            <a href="assets/Madhur_Lakshmanan_Resume.pdf" download class="btn btn-ghost">Download Resume ↓</a>
+          </div>
+          <div class="contact-secondary">
+            <a href="https://github.com/madhurlak0810" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/madhurlak" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="tel:+12404682150">(240) 468-2150</a>
+            <span>College Park, MD</span>
+          </div>
+          <p class="footer-note">© <span id="year"></span> Madhur Lakshmanan</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
