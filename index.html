@@ -178,6 +178,27 @@
         <div class="project-grid">
           <article class="project-card reveal">
             <div class="project-card-head">
+              <h3>PersonalOS</h3>
+              <a href="https://github.com/madhurlak0810/PersonalOS" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
+            </div>
+            <p>
+              A local-first, multi-agent assistant that automates job search, orchestrated with
+              LangGraph. The model only proposes tool intents — it never calls a tool or touches
+              a credential. Actively in development.
+            </p>
+            <ul>
+              <li>A default-deny policy engine authorizes every intent, a human approves anything that writes outside the system, and an isolated executor runs each approved action exactly once with a full audit record.</li>
+              <li>Supervisor graph with typed routing hands off to a job-search subgraph that searches, deduplicates, scores, evidence-checks, and shortlists postings.</li>
+              <li>Workflow state is checkpointed to PostgreSQL at every step, so a run survives a crash or deploy and resumes where it stopped; worker leases prevent double resumes.</li>
+              <li>MCP servers for jobs and sandboxed files, credentials held in the OS keychain and redacted from logs and traces, and CI-enforced layer boundaries — covered by 600+ tests.</li>
+            </ul>
+            <div class="tag-row">
+              <span>Python</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>SQLAlchemy</span><span>Alembic</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card-head">
               <h3>Serverless Research Intelligence Platform</h3>
               <a href="https://github.com/madhurlak0810/Custom-Research" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
             </div>
@@ -215,27 +236,6 @@
 
           <article class="project-card reveal">
             <div class="project-card-head">
-              <h3>PersonalOS</h3>
-              <a href="https://github.com/madhurlak0810/PersonalOS" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
-            </div>
-            <p>
-              A local-first, multi-agent assistant that automates job search, orchestrated with
-              LangGraph. The model only proposes tool intents — it never calls a tool or touches
-              a credential. Actively in development.
-            </p>
-            <ul>
-              <li>A default-deny policy engine authorizes every intent, a human approves anything that writes outside the system, and an isolated executor runs each approved action exactly once with a full audit record.</li>
-              <li>Supervisor graph with typed routing hands off to a job-search subgraph that searches, deduplicates, scores, evidence-checks, and shortlists postings.</li>
-              <li>Workflow state is checkpointed to PostgreSQL at every step, so a run survives a crash or deploy and resumes where it stopped; worker leases prevent double resumes.</li>
-              <li>MCP servers for jobs and sandboxed files, credentials held in the OS keychain and redacted from logs and traces, and CI-enforced layer boundaries — covered by 600+ tests.</li>
-            </ul>
-            <div class="tag-row">
-              <span>Python</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>SQLAlchemy</span><span>Alembic</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card-head">
               <h3>Autonomous Drone Exploration</h3>
               <a href="https://github.com/madhurlak0810/drone_exploration" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
             </div>
@@ -266,23 +266,6 @@
             </ul>
             <div class="tag-row">
               <span>Python</span><span>FastAPI</span><span>Docker</span><span>Kubernetes</span><span>ClearML</span><span>AWS S3</span><span>Collaborative Filtering</span><span>Hybrid Models</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-card-head">
-              <h3>NYC EMS Dispatch Optimization</h3>
-              <a href="https://github.com/madhurlak0810/NYC-ems-dispatch" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
-            </div>
-            <p>
-              A simulation of real-time ambulance dispatching across a dense urban area, built on
-              OpenStreetMap data and a location-allocation optimization model.
-            </p>
-            <ul>
-              <li>Models ambulance placement and dispatch decisions to minimize response times under realistic road-network constraints.</li>
-            </ul>
-            <div class="tag-row">
-              <span>Python</span><span>OpenStreetMap</span><span>Location-Allocation Optimization</span><span>Simulation</span>
             </div>
           </article>
         </div>
@@ -353,7 +336,6 @@
               <span class="timeline-date">May 2024</span>
             </div>
             <p class="timeline-org">Bachelor of Technology, Electronics and Communication Engineering</p>
-            <p class="edu-gpa">GPA: 3.2 / 4.0</p>
           </article>
         </div>
       </div>
