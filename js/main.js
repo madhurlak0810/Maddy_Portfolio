@@ -92,6 +92,7 @@ document.addEventListener('keydown', (e) => {
 
 // Wheel: let a panel scroll vertically within itself first; only once
 // it hits its own top/bottom edge does the wheel move between panels.
+let wheelLocked = false;
 scroller.addEventListener(
   'wheel',
   (e) => {
@@ -112,7 +113,17 @@ scroller.addEventListener(
 
     if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
     e.preventDefault();
-    scroller.scrollLeft += e.deltaY;
+
+    // Move a whole panel per gesture: nudging scrollLeft by the wheel delta
+    // just gets pulled back by the mandatory scroll snap.
+    if (wheelLocked || Math.abs(e.deltaY) < 8) return;
+    const next = currentIndex() + (e.deltaY > 0 ? 1 : -1);
+    if (next < 0 || next >= panels.length) return;
+    wheelLocked = true;
+    setTimeout(() => {
+      wheelLocked = false;
+    }, 700);
+    goToPanel(panels[next].id);
   },
   { passive: false }
 );
