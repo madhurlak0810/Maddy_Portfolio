@@ -55,9 +55,9 @@
         </h1>
         <p class="hero-role reveal">Machine Learning Engineer</p>
         <p class="hero-sub reveal">
-          Building LLM-orchestrated platforms, retrieval systems, and cloud-native ML
-          infrastructure — from serverless RAG pipelines on AWS to production forecasting
-          systems handling millions of records.
+          Building agentic systems, retrieval pipelines, and the production infrastructure
+          that runs them — from policy-gated multi-agent workflows to serverless RAG on AWS
+          and forecasting pipelines in SageMaker.
         </p>
         <div class="hero-actions reveal">
           <a href="#projects" class="btn btn-primary scroll-link" data-target="projects">View Projects</a>
@@ -82,9 +82,9 @@
         </div>
         <div class="about-grid">
           <p class="about-text reveal">
-            I'm a Master's student in Applied Machine Learning at the University of Maryland,
-            currently building AI infrastructure that spans LLM orchestration, retrieval-augmented
-            generation, and cloud-native deployment. My work has ranged from AutoEDA agent platforms
+            I'm a machine learning engineer with an MS in Applied Machine Learning from the
+            University of Maryland, building AI infrastructure that spans LLM orchestration,
+            retrieval-augmented generation, and cloud-native deployment. My work has ranged from AutoEDA agent platforms
             at <strong>Causify AI</strong>, to production forecasting pipelines at
             <strong>Thomson Reuters</strong>, to fully serverless research-intelligence systems on AWS.
             I care about interfaces that make complex ML systems usable — structured outputs, schema-
@@ -219,15 +219,18 @@
               <a href="https://github.com/madhurlak0810/PersonalOS" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
             </div>
             <p>
-              A local-first, multi-agent personal assistant orchestrated with LangGraph — coordinating
-              job search, calendar, communications, and file agents under a single control plane.
+              A local-first, multi-agent assistant that automates job search, orchestrated with
+              LangGraph. The model only proposes tool intents — it never calls a tool or touches
+              a credential. Actively in development.
             </p>
             <ul>
-              <li>Durable state and full audit trails across agent runs, so every action taken can be traced back to its trigger.</li>
-              <li>A deterministic policy engine sits between proposal and execution — the LLM proposes actions, human-approval gates and the policy engine authorize and execute them.</li>
+              <li>A default-deny policy engine authorizes every intent, a human approves anything that writes outside the system, and an isolated executor runs each approved action exactly once with a full audit record.</li>
+              <li>Supervisor graph with typed routing hands off to a job-search subgraph that searches, deduplicates, scores, evidence-checks, and shortlists postings.</li>
+              <li>Workflow state is checkpointed to PostgreSQL at every step, so a run survives a crash or deploy and resumes where it stopped; worker leases prevent double resumes.</li>
+              <li>MCP servers for jobs and sandboxed files, credentials held in the OS keychain and redacted from logs and traces, and CI-enforced layer boundaries — covered by 600+ tests.</li>
             </ul>
             <div class="tag-row">
-              <span>Python</span><span>LangGraph</span><span>Multi-Agent Systems</span><span>Policy Engine</span>
+              <span>Python</span><span>LangGraph</span><span>MCP</span><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>SQLAlchemy</span><span>Alembic</span>
             </div>
           </article>
 
@@ -250,18 +253,19 @@
 
           <article class="project-card reveal">
             <div class="project-card-head">
-              <h3>Recommendation Systems Toolkit</h3>
+              <h3>Recommendation Systems Platform</h3>
               <a href="https://github.com/madhurlak0810/recommendation-systems" target="_blank" rel="noopener" class="repo-link">Repo ↗</a>
             </div>
             <p>
-              A multi-component library for building, deploying, and managing recommender models —
-              spanning collaborative filtering, hybrid approaches, and popularity-based baselines.
+              Collaborative-filtering, hybrid, and popularity-based recommenders, each served as
+              its own FastAPI microservice and deployed on Kubernetes.
             </p>
             <ul>
-              <li>Modular subdirectories for input processing, model training, and model updates, so individual recommendation strategies can be swapped independently.</li>
+              <li>Five independently deployable services — three recommenders, input processing, and model updates — each with its own Docker image and Kubernetes deployment manifest.</li>
+              <li>A dedicated retraining service rebuilds the models and stores the artifacts in AWS S3, with ClearML for experiment tracking and model management.</li>
             </ul>
             <div class="tag-row">
-              <span>Python</span><span>Collaborative Filtering</span><span>Hybrid Models</span><span>Recommender Systems</span>
+              <span>Python</span><span>FastAPI</span><span>Docker</span><span>Kubernetes</span><span>ClearML</span><span>AWS S3</span><span>Collaborative Filtering</span><span>Hybrid Models</span>
             </div>
           </article>
 
@@ -372,7 +376,6 @@
           <div class="contact-secondary">
             <a href="https://github.com/madhurlak0810" target="_blank" rel="noopener">GitHub</a>
             <a href="https://linkedin.com/in/madhurlak" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="tel:+12404682150">(240) 468-2150</a>
             <span>College Park, MD</span>
           </div>
           <p class="footer-note">© <span id="year"></span> Madhur Lakshmanan</p>
